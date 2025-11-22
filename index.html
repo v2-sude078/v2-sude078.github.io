@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <title>Video Gallery</title>
-  <style>
+<meta name="referrer" content="no-referrer-when-downgrade" />	
+<style>
     :root {
+      
       --bg-color: #f4f7f6;
       --card-bg-color: #ffffff;
       --text-color: #333333;
@@ -31,7 +28,7 @@
       color: var(--link-color);
       margin-bottom: 2rem;
       text-shadow: 1px 1px 3px var(--shadow-light);
-      white-space: nowrap;
+      white-space: nowrap; 
     }
 
     .gallery-container {
@@ -76,44 +73,26 @@
       font-weight: 600;
       color: var(--text-color);
       flex-grow: 1;
-      white-space: nowrap;
-    }
-
-    /* NEW: horizontal two-button row (left + right) */
-    .button-row {
-      display: flex;
-      justify-content: space-between; /* puts one at left and one at right */
-      gap: 1rem;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto 2rem auto;
-      padding: 0 0.25rem;
-      box-sizing: border-box;
-      flex-wrap: nowrap; /* keep them side-by-side, not stacked */
-      overflow-x: auto;  /* if screen is extremely narrow allow horizontal scroll */
-    }
-
-    .video-link,
-    .download-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      padding: 0.75rem 1.25rem;
-      font-size: clamp(0.85rem, 2.5vw, 1rem);
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      white-space: nowrap;
-      min-width: 140px; /* prevents too small buttons from wrapping text */
-      flex: 1; /* allow buttons to grow and share available space */
+	  white-space: nowrap;
     }
 
     .video-link {
+      display: flex; /* Change to flex */
+      align-items: center; /* Vertically center content */
+      justify-content: center; /* Horizontally center content */
+      width: 100%; /* Or auto / fit-content */
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
       background-color: var(--link-color);
-      transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
-      margin: 0; /* reset any default margin */
+      color: #ffffff;
+      text-decoration: none;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  
+      white-space: nowrap; 
     }
 
     .video-link:hover {
@@ -121,201 +100,296 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 8px var(--shadow-heavy);
     }
-
-    .download-btn {
-      background-color: #24292e;
-      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
-      color: #fff;
-      margin: 0;
+	.next-page-button {
+      margin-top: 30px; 
+      margin-bottom: 50px; 
     }
-
-    .download-btn:hover {
-      background-color: #111;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px var(--shadow-heavy);
-    }
-
+        }
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            background-color: #24292e;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            margin: 18px 0;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #000;
+        }
+    
     @media (min-width: 768px) {
       .gallery-container {
         grid-template-columns: repeat(4, 1fr);
       }
-      .video-link,
-      .download-btn {
-        font-size: 1rem;
-      }
-      /* On larger screens constrain the buttons to not be too wide */
-      .video-link,
-      .download-btn {
-        flex: 0 1 48%; /* each button takes about half the container */
+      .video-link {
+        width: auto;
       }
     }
-
     .hidden-css {
-      display: none !important;
+      display: none !important; 
+
     }
+    
   </style>
 </head>
 
 <body>
   <header>
+
     <h1>Your Ultimate Video Gallery for Viral Content</h1>
-  </header>
-<script async="async" data-cfasync="false" src="//buffetaccommodating.com/31ef0948d9c167545382ae2aeb6744f3/invoke.js"></script>
-<div id="container-31ef0948d9c167545382ae2aeb6744f3"></div>
-  <!-- Gallery placeholder (kept from original) -->
-  <main class="gallery-container" aria-live="polite">
-    <!-- Example items (fill as needed) -->
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-        <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-        <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
-      <figcaption>Video 1</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
-      <figcaption>Video 2</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
-      <figcaption>Video 3</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    <figure>
-      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
-      <figcaption>Video 4</figcaption>
-    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
-    </figure>
-    
-    
-    </main>
-    <br>
-    <br>
-      <!-- Button row: two side-by-side buttons (left + right) -->
-    <script type="text/javascript">
+</header>
+	<script type="text/javascript">
 	atOptions = {
-		'key' : '87c735bb67485e9127f1b2788ae8e400',
+		'key' : 'cf902c3f231d99e4ed78299963127fdb',
 		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
+		'height' : 50,
+		'width' : 320,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//buffetaccommodating.com/87c735bb67485e9127f1b2788ae8e400/invoke.js"></script>
+<script type="text/javascript" src="//buffetaccommodating.com/cf902c3f231d99e4ed78299963127fdb/invoke.js"></script>
 
-  <div class="button-row" role="navigation" aria-label="Main actions">
-    <!-- Left button -->
-    <a class="video-link" href="https://buffetaccommodating.com/grm4z79j?key=9883f0c47c69ad3168eb3cc11aef3e7a" target="_blank" rel="noopener noreferrer">
-      🔗 SEE MORE VIDEOS
-    </a>
+  <main>
+    <section class="gallery-container">
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/da9d0d67f.jpg?raw=true" alt="I have to try this at home" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">I have to try this at home</figcaption>
+        <meta itemprop="description" content="A humorous clip showing a person's perspective from behind a pair of shoes." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/URL1SKz11.mp4" />
+        <a href="https://colahcola078.github.io/4rJUHDOz1.mp4" class="video-link" aria-label="Watch video: behind the shoes">Watch Video Now</a>
+      </figure>
 
-    <!-- Right button -->
-    <a class="download-btn" href="https://downrightnative.com/XZyh1A" download target="_blank" rel="noopener noreferrer">
-      ⬇️ DOWNLOAD
-    </a>
-  </div>
-</body>
-</html>
-  <!-- Histats.com  START  (aync)-->
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/f591afb47.jpg?raw=true" alt="Beautiful girls" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Beautiful girls</figcaption>
+        <meta itemprop="description" content="A short video clip of someone rushing, in a hurry." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/NA0xNeGZ1.mp4" />
+        <a href="https://colahcola078.github.io/TXfe6VW51.mp4" class="video-link" aria-label="Watch video: he's in a hurry">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/3717496f2.jpg?raw=true" alt="protein intake 😝" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">protein intake 😝</figcaption>
+        <meta itemprop="description" content="A video portraying someone's struggle or inability to endure a situation." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/bg3xtfL31.mp4" />
+        <a href="https://colahcola078.github.io/NiJsR0x01.mp4" class="video-link" aria-label="Watch video: I couldn't stand it">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/3c751f9a5.jpg?raw=true" alt="When besties come" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">When besties come</figcaption>
+        <meta itemprop="description" content="Relaxing video of beautiful ocean waves." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/4KEnOYXX1.mp4" />
+        <a href="https://colahcola078.github.io/QyfMztfr1.mp4" class="video-link" aria-label="Watch video: Look at the waves">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/19aee73ef.jpg?raw=true" alt="More like Uber Treats" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">More like Uber Treats</figcaption>
+        <meta itemprop="description" content="A video showcasing an ideal or desirable tutor." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/lAStCbav1.mp4" />
+        <a href="https://colahcola078.github.io/GnSyEOZD1.mp4" class="video-link" aria-label="Watch video: tutor i always wanted">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/c5d3e24b7.jpg?raw=true" alt="WTF This morning Whoever cooked" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Whoever cooked</figcaption>
+        <meta itemprop="description" content="A captivating video highlighting the majestic stripes of a tiger." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/kRUTOHRL1.mp4" />
+        <a href="https://colahcola078.github.io/BDARU25I1.mp4" class="video-link" aria-label="Watch video: Tiger stripes, fearless">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/e420cd673.jpg?raw=true" alt="Cozy tones and calm" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Cozy tones and calm</figcaption>
+        <meta itemprop="description" content="A dynamic video of people dancing or engaging in a strenuous activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/UmlFZ5Lv1.mp4" />
+        <a href="https://colahcola078.github.io/t9r5SoON1.mp4" class="video-link" aria-label="Watch video: Love got us sweatin">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/0ef28f7c8.jpg?raw=true" alt="Sarah Lynn ●" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sarah Lynn ●</figcaption>
+        <meta itemprop="description" content="A video focusing on pink painted toes, possibly in a celebratory context." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/uKvPHWBp1.mp4" />
+        <a href="https://cdn-pelan24.github.io/DWLojxsu1.mp4" class="video-link" aria-label="Watch video: Pink toes for the win">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/d61a16328.jpg?raw=true" alt="This bed got" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">This bed got</figcaption>
+        <meta itemprop="description" content="A motivational video about feeling blessed or highly favored." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/iRBuM8DN1.mp4" />
+        <a href="https://cdn-pelan24.github.io/DIJQAE1a1.mp4" class="video-link" aria-label="Watch video: I'm highly favored">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/15bdcbb8f.jpg?raw=true" alt="Red bones my weakness" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Red bones my weakness</figcaption>
+        <meta itemprop="description" content="A video depicting something that causes intense burning or passion." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/cfXoD4Wt1.mp4" />
+        <a href="https://cdn-pelan24.github.io/kpTb3oOz1.mp4" class="video-link" aria-label="Watch video: makes everything burn">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/707b5864a.jpg?raw=true" alt="Appreciation in" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Appreciation in</figcaption>
+        <meta itemprop="description" content="A video showcasing a woman's bravery or daring act." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Zqke9Nw91.mp4" />
+        <a href="https://cdn-pelan24.github.io/goYBjASr1.mp4" class="video-link" aria-label="Watch video: This woman is very brave">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/fcd568a8e.jpg?raw=true" alt="Amazing Breeze🤩" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Amazing Breeze🤩</figcaption>
+        <meta itemprop="description" content="A video clip of someone doing something unexpected or bold in a public setting." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/wQUqfhds1.mp4" />
+        <a href="https://cdn-pelan24.github.io/mRf8Ck3v1.mp4" class="video-link" aria-label="Watch video: actually did it in public">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/c111ee8d4.jpg?raw=true" alt="Wait something’s" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Wait something’s</figcaption>
+        <meta itemprop="description" content="A cute video featuring a beautiful cat." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/ECvAFrSS1.mp4" />
+        <a href="https://cdn-pelan24.github.io/PkbcD6Lo1.mp4" class="video-link" aria-label="Watch video: Pretty Kitty">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/4372df4e5.jpg?raw=true" alt="Dating with u" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Dating with u</figcaption>
+        <meta itemprop="description" content="A video capturing an event or object situated in the middle of a road." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/tf6Qm5ZE1.mp4" />
+        <a href="https://cdn-pelan24.github.io/j86Cym9s1.mp4" class="video-link" aria-label="Watch video: in the middle of the road">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/f1aea7931.jpg?raw=true" alt="Wait… this turned " itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Wait… this turned </figcaption>
+        <meta itemprop="description" content="A video showing interactions or activities involving a brother-in-law." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/KLJYr2fp1.mp4" />
+        <a href="https://colahcola078.github.io/QHkEtbkF1.mp4" class="video-link" aria-label="Watch video: with brother-in-law">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://cdn.aceimg.com/3fac94f99.jpg?raw=true" alt="Stunning landscape with an impactful visual effect" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Moms showed up all</figcaption>
+        <meta itemprop="description" content="A video featuring a beautiful view with an unexpected or powerful element." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Jn93oIB21.mp4" />
+        <a href="https://colahcola078.github.io/E8ihRfyT1.mp4" class="video-link" aria-label="Watch video: beautiful view hit harder">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/lnoCJkG81.jpg?raw=true" alt="Video of a person from OnlyFans" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Try planting</figcaption>
+        <meta itemprop="description" content="A video clip featuring content from an OnlyFans creator." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/qeOC3VYU1.mp4" />
+        <a href="https://caitlinogletree.github.io/lnoCJkG81.mp4" class="video-link" aria-label="Watch video: Her OF video">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/zTJRQ.jpg?raw=true" alt="People contemplating if they can have something desirable" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Attention 💋</figcaption>
+        <meta itemprop="description" content="A video exploring the desire or possibility of possessing something." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/SZgPtiDm1.mp4" />
+        <a href="https://caitlinogletree.github.io/zTJRQ.mp4" class="video-link" aria-label="Watch video: Can we have this">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/H4dDc6kF1.jpg?raw=true" alt="A person described as ideal for a wife" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">she doesn't stop</figcaption>
+        <meta itemprop="description" content="A video showcasing qualities considered ideal for a wife." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/exRhgI5o1.mp4" />
+        <a href="https://caitlinogletree.github.io/H4dDc6kF1.mp4 " class="video-link" aria-label="Watch video: That's wife type">Watch Video Now</a>
+      </figure>
+
+      <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/1zPFbdo61.jpg?raw=true" alt="Person engaged in top riding, skilled and adventurous" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sweet face fool😏</figcaption>
+        <meta itemprop="description" content="A video clip featuring someone excelling in a top riding activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>
+      </figure>
+     <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/1zPFbdo61.jpg?raw=true" alt="Person engaged in top riding, skilled and adventurous" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sweet face fool😏</figcaption>
+        <meta itemprop="description" content="A video clip featuring someone excelling in a top riding activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>
+      </figure>
+      
+     <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/1zPFbdo61.jpg?raw=true" alt="Person engaged in top riding, skilled and adventurous" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sweet face fool😏</figcaption>
+        <meta itemprop="description" content="A video clip featuring someone excelling in a top riding activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>
+      </figure> 
+      
+     <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/1zPFbdo61.jpg?raw=true" alt="Person engaged in top riding, skilled and adventurous" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sweet face fool😏</figcaption>
+        <meta itemprop="description" content="A video clip featuring someone excelling in a top riding activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>
+      </figure>
+     
+     <figure itemscope itemtype="http://schema.org/VideoObject">
+        <img src="https://github.com/adrielis0801/Mabonx.mp4/blob/main/1zPFbdo61.jpg?raw=true" alt="Person engaged in top riding, skilled and adventurous" itemprop="thumbnailUrl" loading="lazy" width="180" height="180" />
+        <figcaption itemprop="name">Sweet face fool😏</figcaption>
+        <meta itemprop="description" content="A video clip featuring someone excelling in a top riding activity." />
+        <meta itemprop="uploadDate" content="2025-08-02" />
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>
+      </figure> 
+    </section>
+  </main>
+  <div>
+
+<br>
+<br>
+<br>
+<br>
+        <link itemprop="contentUrl" href="https://brexit-web.github.io/Yf43JBWu1.mp4" />
+        <a href="https://cdn-sude078.github.io" class="video-link">🔗 SEE MORE VIDEOS</a>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Videy.co. All rights reserved.</p>
+    <div id="secretMessage" class="hidden-css">This is a secret message, hidden by default.</div>
+  </footer>
+<script async="async" data-cfasync="false" src="//buffetaccommodating.com/34414abc94f86276d97e28409968a856/invoke.js"></script>
+<div id="container-34414abc94f86276d97e28409968a856"></div>
+
+	<!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4992245,4,511,95,18,00000000']);
 _Hasync.push(['Histats.fasi', '1']);
