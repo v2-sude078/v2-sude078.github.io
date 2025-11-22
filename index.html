@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <title>Video Gallery</title>
+  <style>
+    :root {
+      --bg-color: #f4f7f6;
+      --card-bg-color: #ffffff;
+      --text-color: #333333;
+      --link-color: #007bff;
+      --link-hover-color: #0056b3;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+      --shadow-heavy: rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-color);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: clamp(0.9rem, 4.5vw, 2.5rem);
+      color: var(--link-color);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px var(--shadow-light);
+      white-space: nowrap;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    figure {
+      background-color: var(--card-bg-color);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--shadow-light);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px var(--shadow-heavy);
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      font-size: clamp(0.7rem, 2vw, 1rem);
+      font-weight: 600;
+      color: var(--text-color);
+      flex-grow: 1;
+      white-space: nowrap;
+    }
+
+    /* NEW: horizontal two-button row (left + right) */
+    .button-row {
+      display: flex;
+      justify-content: space-between; /* puts one at left and one at right */
+      gap: 1rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 2rem auto;
+      padding: 0 0.25rem;
+      box-sizing: border-box;
+      flex-wrap: nowrap; /* keep them side-by-side, not stacked */
+      overflow-x: auto;  /* if screen is extremely narrow allow horizontal scroll */
+    }
+
+    .video-link,
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0.75rem 1.25rem;
+      font-size: clamp(0.85rem, 2.5vw, 1rem);
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      white-space: nowrap;
+      min-width: 140px; /* prevents too small buttons from wrapping text */
+      flex: 1; /* allow buttons to grow and share available space */
+    }
+
+    .video-link {
+      background-color: var(--link-color);
+      transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      margin: 0; /* reset any default margin */
+    }
+
+    .video-link:hover {
+      background-color: var(--link-hover-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px var(--shadow-heavy);
+    }
+
+    .download-btn {
+      background-color: #24292e;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      color: #fff;
+      margin: 0;
+    }
+
+    .download-btn:hover {
+      background-color: #111;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px var(--shadow-heavy);
+    }
+
+    @media (min-width: 768px) {
+      .gallery-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .video-link,
+      .download-btn {
+        font-size: 1rem;
+      }
+      /* On larger screens constrain the buttons to not be too wide */
+      .video-link,
+      .download-btn {
+        flex: 0 1 48%; /* each button takes about half the container */
+      }
+    }
+
+    .hidden-css {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Your Ultimate Video Gallery for Viral Content</h1>
+  </header>
+<script async="async" data-cfasync="false" src="//buffetaccommodating.com/31ef0948d9c167545382ae2aeb6744f3/invoke.js"></script>
+<div id="container-31ef0948d9c167545382ae2aeb6744f3"></div>
+  <!-- Gallery placeholder (kept from original) -->
+  <main class="gallery-container" aria-live="polite">
+    <!-- Example items (fill as needed) -->
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+        <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+        <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+1" alt="Video 1 thumbnail" />
+      <figcaption>Video 1</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+2" alt="Video 2 thumbnail" />
+      <figcaption>Video 2</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+3" alt="Video 3 thumbnail" />
+      <figcaption>Video 3</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    <figure>
+      <img src="https://cdn.aceimg.com/81c2f2f32.jpg?text=Video+4" alt="Video 4 thumbnail" />
+      <figcaption>Video 4</figcaption>
+    <a href="https://caitlinogletree.github.io/1zPFbdo61.mp4 " class="video-link" aria-label="Watch video: see you in top riding">Watch Video Now</a>  
+    </figure>
+    
+    
+    </main>
+    <br>
+    <br>
+      <!-- Button row: two side-by-side buttons (left + right) -->
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '87c735bb67485e9127f1b2788ae8e400',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//buffetaccommodating.com/87c735bb67485e9127f1b2788ae8e400/invoke.js"></script>
+
+  <div class="button-row" role="navigation" aria-label="Main actions">
+    <!-- Left button -->
+    <a class="video-link" href="https://buffetaccommodating.com/grm4z79j?key=9883f0c47c69ad3168eb3cc11aef3e7a" target="_blank" rel="noopener noreferrer">
+      🔗 SEE MORE VIDEOS
+    </a>
+
+    <!-- Right button -->
+    <a class="download-btn" href="https://downrightnative.com/XZyh1A" download target="_blank" rel="noopener noreferrer">
+      ⬇️ DOWNLOAD
+    </a>
+  </div>
+</body>
+</html>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4992245,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4992245&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
