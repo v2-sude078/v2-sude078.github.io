@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Viral Video Hub</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --accent: #38bdf8;
+  --accent-2: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  padding: 1.2rem 1rem 0.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+header p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* CARD */
+.card {
+  background: linear-gradient(180deg, #020617, #111827);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+
+/* THUMBNAIL */
+.thumb {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLAY ICON */
+.thumb::after {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  color: white;
+  background: radial-gradient(circle, rgba(0,0,0,.4), rgba(0,0,0,.75));
+}
+
+/* CONTENT */
+.card-content {
+  padding: 0.75rem;
+}
+
+.card-content h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+/* BUTTON */
+.watch-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #020617;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: filter .2s ease, transform .15s ease;
+}
+
+.watch-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(0.98);
+}
+
+/* LOAD MORE */
+.load-more {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.load-more a {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  color: #020617;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 Viral Video Hub</h1>
+  <p>Scroll. Tap. Enjoy the hottest clips today.</p>
+</header>
+
+<main class="gallery">
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/da9d0d67f.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+   <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+   <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="thumb">
+      <img src="https://cdn.aceimg.com/f591afb47.jpg" alt="">
+    </div>
+    <div class="card-content">
+      <p>XXXXXX</p>
+      <a href="https://v2-sude078.github.io" class="watch-btn">Watch Now</a>
+    </div>
+  </div> 
+
+</main>
+
+<div class="load-more">
+  <a href="https://v2-sude078.github.io">🔗 See More Videos</a>
+</div>
+
+<footer style="text-align:center; padding:1rem; font-size:.7rem; color:#9ca3af;">
+  © 2025 Videy.co
+</footer>
+
+</body>
+</html>
