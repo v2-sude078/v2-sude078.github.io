@@ -150,10 +150,8 @@
         return;
       }
 
-      // Link player / viewer
       const playerUrl = `https://cdn-videycoi.site/v/?id=${videoId}`;
       
-      // Link MP4 langsung (untuk ditampilkan sebagai teks)
       const mp4Url = `https://cdn.videy.co/${videoId}.mp4`;
 
       if (alt1) {
@@ -162,15 +160,9 @@
         alt1.title = `Play video: ${videoId}`;
       }
 
-      // Main link tetap statis (tidak diubah)
-      // const mainlink = document.getElementById('mainlink');
-      // Jika ingin update mainlink juga, bisa ditambah di sini
     }
 
-    // Jalankan setelah DOM siap
     window.addEventListener('load', updateLinks);
-    // Untuk SPA atau jika URL berubah tanpa reload (opsional)
-    // window.addEventListener('popstate', updateLinks);
   </script>
 </body>
 </html>
