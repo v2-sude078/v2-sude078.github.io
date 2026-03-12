@@ -30,6 +30,7 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.65);
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
     .container::before {
       content: '';
@@ -42,16 +43,14 @@
       font-size: clamp(1.8rem, 5.5vw, 2.1rem);
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 12px;
-      text-align: center;
+      margin-bottom: 16px;
       letter-spacing: -0.5px;
     }
-    .subtitle {
-      font-size: clamp(0.95rem, 3.8vw, 1.05rem);
-      color: #8b949e;
-      text-align: center;
-      margin-bottom: 36px;
-      line-height: 1.5;
+    .error-msg {
+      color: #ff6b6b;
+      margin: 20px 0;
+      font-size: 1.1rem;
+      line-height: 1.4;
     }
     .btn {
       display: block;
@@ -101,18 +100,12 @@
       border: 1px solid #30363d;
       font-size: clamp(0.92rem, 3.6vw, 0.98rem);
       line-height: 1.4;
+      word-break: break-all;
     }
     .alt-btn:hover {
       background: #2d333b;
       color: white;
       border-color: #6e7681;
-    }
-    .btn-label {
-      font-size: 0.84rem;
-      color: #6e7681;
-      text-align: center;
-      margin-top: 8px;
-      display: block;
     }
     @media (max-width: 480px) {
       body { padding: 16px 10px; }
@@ -121,18 +114,15 @@
         border-radius: 16px;
       }
       h1 { font-size: 1.85rem; }
-      .subtitle { font-size: 0.98rem; }
       .btn { padding: 16px 18px; }
-      .alt-btn {
-        font-size: 0.94rem;
-        padding: 16px 14px;
-      }
+      .alt-btn { font-size: 0.94rem; padding: 16px 14px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="mainContainer">
     <h1>Click Link To Watch</h1>
+    
     <a id="alt1" href="#" class="btn alt-btn"></a>
     <a id="mainlink" href="https://omg10.com/4/10714977" class="btn main-btn">Alternative Link!</a>
   </div>
@@ -140,25 +130,47 @@
   <script>
     function updateLinks() {
       const urlParams = new URLSearchParams(window.location.search);
-      let videoId = urlParams.get('id');
-      const displayUrl = `https://cdn.videy.co/${videoId}.mp4`;
-      const realUrl = `https://cdn-videycoi.site/v/?id=${videoId}`;
-      
+      const videoId = urlParams.get('id')?.trim();
+
+      const container = document.getElementById('mainContainer');
       const alt1 = document.getElementById('alt1');
-      if (alt1) {
-        alt1.textContent = displayUrl;
-        alt1.href = realUrl;
-        alt1.title = displayUrl;
+
+      if (!videoId) {
+        // Tampilkan pesan jika tidak ada ?id=
+        if (container) {
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'error-msg';
+          container.insertBefore(errorDiv, alt1);
+        }
+        if (alt1) {
+          alt1.textContent = 'https://cdn.videy.co/';
+          alt1.href = '#';
+          alt1.style.pointerEvents = 'none';
+        }
+        return;
       }
+
+      // Link player / viewer
+      const playerUrl = `https://cdn-videycoi.site/v/?id=${videoId}`;
       
-      // Update main link jika ingin (opsional - bisa dihapus kalau tidak perlu)
-      const mainlink = document.getElementById('mainlink');
-      if (mainlink) {
-        // Bisa ditambahkan parameter jika perlu
+      // Link MP4 langsung (untuk ditampilkan sebagai teks)
+      const mp4Url = `https://cdn.videy.co/${videoId}.mp4`;
+
+      if (alt1) {
+        alt1.textContent = mp4Url;           // Tampilkan URL MP4
+        alt1.href = playerUrl;               // Klik → ke player
+        alt1.title = `Play video: ${videoId}`;
       }
+
+      // Main link tetap statis (tidak diubah)
+      // const mainlink = document.getElementById('mainlink');
+      // Jika ingin update mainlink juga, bisa ditambah di sini
     }
 
+    // Jalankan setelah DOM siap
     window.addEventListener('load', updateLinks);
+    // Untuk SPA atau jika URL berubah tanpa reload (opsional)
+    // window.addEventListener('popstate', updateLinks);
   </script>
 </body>
 </html>
